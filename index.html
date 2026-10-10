@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>디어리어디 · dearyerdy</title>
+<meta name="description" content="고양이와 함께 달콤한 일상을 수집해요. 그림 그리는 디어와 사진 찍는 어디의 다꾸 스티커 브랜드, 디어리어디.">
+<meta property="og:title" content="디어리어디 · dearyerdy">
+<meta property="og:description" content="고양이와 함께 달콤한 일상을 수집해요.">
+<meta property="og:image" content="assets/logo_full.jpg">
+<link rel="icon" href="assets/logo_faces.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Pen+Script&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fbf4ea; --paper-2:#f6ead9; --card:#fffdf8;
+  --ink:#2c2623; --sub:#7a6f68; --line:#ecdfcd;
+  --pink:#f8c6bd; --pink-deep:#ec9c8f; --peach:#f5c9a7;
+  --cream:#fbe7c9; --grey:#a3a7ad; --sky:#bcd7ec; --butter:#f7da84; --mint:#cfe5d2;
+  --shadow:0 10px 30px rgba(92,64,44,.12), 0 2px 6px rgba(92,64,44,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--ink); background-color:var(--paper);
+  background-image:radial-gradient(rgba(150,120,95,.16) 1.2px, transparent 1.3px);
+  background-size:22px 22px;
+  font-family:"Gowun Dodum","Pretendard","Noto Sans KR",sans-serif; line-height:1.75; word-break:keep-all;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.hand{font-family:"Nanum Pen Script",cursive;font-weight:400;font-size:1.25em}
+.round{font-family:"Jua",sans-serif;font-weight:400}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:0;z-index:20;background:rgba(251,244,234,.86);backdrop-filter:blur(10px);border-bottom:1px dashed var(--line)}
+header.nav .wrap{display:flex;align-items:center;gap:18px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:34px;width:auto}
+.brand span{font-family:"Jua";font-size:22px;letter-spacing:-.5px}
+nav.links{margin-left:auto;display:flex;gap:6px}
+nav.links a{text-decoration:none;font-size:15px;padding:7px 12px;border-radius:999px;color:var(--sub);transition:.2s}
+nav.links a:hover{background:var(--card);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:"Jua";font-size:17px;padding:12px 22px;border-radius:999px;border:2px solid var(--ink);background:var(--card);box-shadow:3px 3px 0 var(--ink);transition:transform .15s, box-shadow .15s}
+.btn:hover{transform:translate(-1px,-2px);box-shadow:4px 5px 0 var(--ink)}
+.btn.pink{background:var(--pink)}
+.btn.sm{font-size:15px;padding:8px 16px;box-shadow:2px 2px 0 var(--ink)}
+
+/* ---------- doodles ---------- */
+.doodle{position:absolute;pointer-events:none}
+.float{animation:float 6s ease-in-out infinite}
+.float.d2{animation-delay:-2s}.float.d3{animation-delay:-4s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-8px) rotate(var(--r,0deg))}}
+@media (prefers-reduced-motion:reduce){.float{animation:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:72px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.kicker{display:inline-block;font-family:"Nanum Pen Script";font-size:25px;color:var(--pink-deep);background:var(--card);border:1.5px dashed var(--pink-deep);padding:2px 14px;border-radius:999px;transform:rotate(-2deg)}
+h1{font-family:"Jua";font-weight:400;font-size:clamp(40px,6vw,66px);line-height:1.18;margin:18px 0 18px;letter-spacing:-1px}
+h1 em{font-style:normal;background:linear-gradient(transparent 58%, var(--pink) 58% 92%, transparent 92%);padding:0 4px}
+.hero p.lead{font-size:18px;color:var(--sub);margin:0 0 30px;max-width:30em}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.collage{position:relative;height:520px}
+.polaroid{position:absolute;background:#fff;padding:12px 12px 46px;box-shadow:var(--shadow);border-radius:4px}
+.polaroid img{border-radius:2px;object-fit:cover}
+.polaroid figcaption{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-family:"Nanum Pen Script";font-size:25px;color:var(--sub)}
+.tape{position:absolute;width:110px;height:30px;background:repeating-linear-gradient(45deg,rgba(248,198,189,.85) 0 8px,rgba(255,255,255,.55) 8px 16px);top:-14px;left:50%;transform:translateX(-50%) rotate(-4deg);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.tape.blue{background:repeating-linear-gradient(90deg,rgba(188,215,236,.9) 0 10px,rgba(255,255,255,.5) 10px 14px)}
+.tape.butter{background:rgba(247,218,132,.82)}
+.p1{width:58%;left:2%;top:10px;transform:rotate(-5deg)}
+.p1 img{aspect-ratio:4/5}
+.p1 figcaption{text-align:left;padding-left:20px}
+.p2{width:44%;right:0;top:120px;transform:rotate(6deg)}
+.p2 img{aspect-ratio:1}
+.faces-sticker{position:absolute;right:6%;bottom:-6px;width:40%;background:#fff;border-radius:999px;padding:14px 22px;box-shadow:var(--shadow);transform:rotate(-3deg);border:3px solid #fff;outline:2px dashed var(--line);outline-offset:-10px}
+
+/* ---------- section common ---------- */
+section{position:relative;padding:86px 0}
+.sec-head{text-align:center;margin-bottom:46px}
+.sec-head .hand{font-size:28px;color:var(--pink-deep)}
+.sec-head h2{font-family:"Jua";font-weight:400;font-size:clamp(30px,4vw,42px);margin:4px 0 10px;letter-spacing:-.5px}
+.sec-head p{color:var(--sub);margin:0 auto;max-width:34em}
+.paper-band{background:var(--paper-2);border-top:2px dashed var(--line);border-bottom:2px dashed var(--line)}
+
+/* ---------- about (디어 & 어디) ---------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:900px;margin:0 auto}
+.person{position:relative;background:var(--card);border-radius:28px;padding:34px 30px 30px;box-shadow:var(--shadow);text-align:center}
+.person:nth-child(1){transform:rotate(-1.2deg)}
+.person:nth-child(2){transform:rotate(1.2deg)}
+.person .face{width:150px;height:110px;object-fit:contain;margin:0 auto 6px}
+.person h3{font-family:"Jua";font-weight:400;font-size:30px;margin:4px 0 2px}
+.person .role{display:inline-block;font-size:14px;padding:2px 12px;border-radius:999px;margin-bottom:12px}
+.person.dear .role{background:var(--cream)}
+.person.yerdy .role{background:#e7e9ec}
+.person p{color:var(--sub);margin:0}
+.plus{display:none}
+.together{max-width:640px;margin:40px auto 0;text-align:center;font-family:"Nanum Pen Script";font-size:31px;line-height:1.45}
+
+/* ---------- collection ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{position:relative;background:var(--card);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s}
+.card:hover{transform:translateY(-6px) rotate(-.6deg)}
+.card .ph{position:relative;aspect-ratio:1;overflow:hidden;background:#f3ece2}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.badge{position:absolute;top:14px;left:14px;font-family:"Jua";font-size:14px;background:var(--butter);padding:4px 12px;border-radius:999px;border:2px solid var(--ink)}
+.card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-family:"Jua";font-weight:400;font-size:23px;margin:0}
+.card p{margin:0;color:var(--sub);font-size:15px}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 12px}
+.card .tags span{font-size:12.5px;background:var(--paper);border:1px solid var(--line);padding:2px 10px;border-radius:999px}
+.card .more{margin-top:auto;font-family:"Jua";font-size:16px;text-decoration:none;color:var(--pink-deep)}
+.card .more:hover{text-decoration:underline}
+
+/* ---------- mood mini ---------- */
+.mood{max-width:760px;margin:0 auto;background:var(--card);border-radius:30px;padding:38px 34px;box-shadow:var(--shadow);text-align:center;position:relative}
+.mood h2{font-family:"Jua";font-weight:400;font-size:32px;margin:0 0 6px}
+.mood .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 18px}
+.mood button{font-family:"Jua";font-size:17px;border:2px solid var(--ink);background:var(--paper);padding:9px 18px;border-radius:18px 18px 18px 6px;cursor:pointer;transition:.15s}
+.mood button:hover,.mood button[aria-pressed="true"]{background:var(--pink);transform:translateY(-2px)}
+.mood .answer{min-height:64px;display:flex;align-items:center;justify-content:center;gap:12px;font-family:"Nanum Pen Script";font-size:30px}
+.mood .answer img{height:54px;width:auto}
+
+/* ---------- gallery ---------- */
+.gallery{columns:3 260px;column-gap:22px}
+.shot{break-inside:avoid;margin:0 0 22px;background:#fff;padding:10px 10px 40px;box-shadow:var(--shadow);border-radius:4px;position:relative}
+.shot:nth-child(odd){transform:rotate(-1.2deg)}
+.shot:nth-child(even){transform:rotate(1.4deg)}
+.shot img{width:100%;border-radius:2px}
+.shot figcaption{position:absolute;left:12px;right:12px;bottom:6px;font-family:"Nanum Pen Script";font-size:24px;color:var(--sub);text-align:center}
+
+/* ---------- insta / news ---------- */
+.insta{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;max-width:980px;margin:0 auto}
+.insta h2{font-family:"Jua";font-weight:400;font-size:clamp(28px,3.6vw,38px);margin:6px 0 12px}
+.insta p{color:var(--sub)}
+.highlights{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0 28px}
+.hl{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13.5px;color:var(--sub)}
+.hl i{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--card);border:2.5px solid var(--pink);box-shadow:0 0 0 3px var(--paper),0 0 0 5px var(--pink-deep);font-style:normal;font-size:26px}
+.phone{justify-self:center;width:290px;background:#fff;border-radius:36px;padding:14px;box-shadow:var(--shadow);border:2px solid var(--line);transform:rotate(3deg)}
+.phone .bar{display:flex;align-items:center;gap:10px;padding:8px 6px 12px}
+.phone .bar img{width:40px;height:40px;border-radius:50%;object-fit:contain;padding:5px;background:var(--pink)}
+.phone .bar b{font-size:14px}
+.phone .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:14px;overflow:hidden}
+.phone .grid img{aspect-ratio:1;object-fit:cover}
+
+/* ---------- where to buy ---------- */
+.buy{text-align:center}
+.buy .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+
+/* ---------- footer ---------- */
+footer{padding:46px 0 60px;border-top:2px dashed var(--line);text-align:center;color:var(--sub);font-size:14px}
+footer img{height:46px;width:auto;margin:0 auto 10px}
+footer .links{display:flex;gap:16px;justify-content:center;margin:10px 0}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ink)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  nav.links{display:none}
+  section > .doodle{display:none}
+  .hero{padding:40px 0 60px}
+  .hero .wrap{grid-template-columns:1fr}
+  .collage{height:440px;max-width:460px;margin:0 auto;width:100%}
+  .cards{grid-template-columns:1fr;max-width:460px;margin:0 auto}
+  .duo{grid-template-columns:1fr;max-width:460px}
+  .insta{grid-template-columns:1fr}
+  .phone{transform:none}
+  section{padding:64px 0}
+}
+@media (max-width:420px){
+  .collage{height:380px}
+  .brand span{font-size:19px}
+  .btn{font-size:16px;padding:10px 18px}
+}
+</style>
+</head>
+<body>
+
+<!-- 재사용 도형 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="star" viewBox="0 0 40 40"><path d="M20 3.5c1.2 0 2 .8 2.6 2l3.4 7.1 7.7 1.1c2.6.4 3.2 2.5 1.4 4.3l-5.6 5.4 1.3 7.7c.4 2.6-1.4 3.9-3.7 2.7L20 30.2l-6.9 3.6c-2.3 1.2-4.1-.1-3.7-2.7l1.3-7.7-5.6-5.4c-1.8-1.8-1.2-3.9 1.4-4.3l7.7-1.1 3.4-7.1c.6-1.2 1.4-2 2.4-2z" stroke="#2c2623" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+    <symbol id="heart" viewBox="0 0 40 40"><path d="M20 34S5 25.5 5 15.2C5 10 8.8 6.5 13.2 6.5c3 0 5.4 1.6 6.8 4 1.4-2.4 3.8-4 6.8-4 4.4 0 8.2 3.5 8.2 8.7C35 25.5 20 34 20 34z" stroke="#2c2623" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+    <symbol id="spark" viewBox="0 0 40 40"><path d="M20 4c1 7 3.5 12 16 16-12.5 4-15 9-16 16-1-7-3.5-12-16-16C16.5 16 19 11 20 4z" stroke="#2c2623" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="paw" viewBox="0 0 40 40"><g stroke="#2c2623" stroke-width="2"><ellipse cx="20" cy="26" rx="8.5" ry="7"/><circle cx="10" cy="16" r="3.6"/><circle cx="16.5" cy="10.5" r="3.6"/><circle cx="23.5" cy="10.5" r="3.6"/><circle cx="30" cy="16" r="3.6"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="디어리어디 홈"><img src="assets/logo_faces.png" alt=""><span>디어리어디</span></a>
+    <nav class="links" aria-label="주요 메뉴">
+      <a href="#story">우리 이야기</a><a href="#collection">컬렉션</a><a href="#daku">다꾸 기록</a><a href="#insta">소식</a>
+    </nav>
+    <a class="btn sm pink" href="https://idus.kr/FPR9C" target="_blank" rel="noopener">아이디어스</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="doodle float" style="left:3%;top:40px;width:34px;--r:-12deg;fill:var(--butter)"><use href="#star"/></svg>
+  <svg class="doodle float d2" style="left:44%;top:30px;width:26px;--r:10deg;fill:var(--pink)"><use href="#heart"/></svg>
+  <svg class="doodle float d3" style="right:4%;bottom:40px;width:30px;fill:var(--sky)"><use href="#spark"/></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">cats · desserts · daily diary</span>
+      <h1>고양이와 함께,<br><em>달콤한 일상</em>을<br>수집해요</h1>
+      <p class="lead">그림 그리는 <b>디어</b>와 사진 찍는 <b>어디</b>가 고양이와 함께한 작은 하루를 스티커에 담아요. 오늘의 기분 한 장, 다이어리 한 칸이 조금 더 따뜻해지도록.</p>
+      <div class="ctas">
+        <a class="btn pink" href="#collection">컬렉션 구경하기</a>
+        <a class="btn" href="https://www.instagram.com/dearyerdy/" target="_blank" rel="noopener">@dearyerdy</a>
+      </div>
+    </div>
+    <div class="collage reveal" aria-hidden="false">
+      <figure class="polaroid p1"><span class="tape"></span><img src="assets/hero_hand.jpg" alt="손에 든 오늘의 감정 씰스티커"><figcaption>오늘의 감정 ♡</figcaption></figure>
+      <figure class="polaroid p2"><span class="tape blue"></span><img src="assets/life_cafe.jpg" alt="케이크와 커피 옆에 붙인 고양이 스티커"><figcaption>카페에서 한 장</figcaption></figure>
+      <div class="faces-sticker"><img src="assets/logo_faces.png" alt="디어와 어디 캐릭터"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" class="paper-band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="hand">우리를 소개할게요</div>
+      <h2>디어 &amp; 어디</h2>
+      <p>둘이 하나의 브랜드를 만들어요. 한 사람은 그리고, 한 사람은 찍어요.</p>
+    </div>
+    <div class="duo">
+      <article class="person dear reveal">
+        <img class="face" src="assets/dear_face.png" alt="디어 캐릭터">
+        <h3>디어</h3>
+        <span class="role">그림 · 고양이와 디저트</span>
+        <p>말랑한 고양이와 달콤한 디저트를 그려요. 하루의 기분을 작은 얼굴 하나에 담는 걸 좋아해요.</p>
+      </article>
+      <article class="person yerdy reveal">
+        <img class="face" src="assets/yerdy_face.png" alt="어디 캐릭터">
+        <h3>어디</h3>
+        <span class="role">사진 · 풍경과 음식</span>
+        <p>예쁜 풍경과 맛있는 음식을 찍어요. 그림이 놓일 자리, 일상의 장면을 찾아다녀요.</p>
+      </article>
+    </div>
+    <p class="together reveal">그림 한 장과 사진 한 장이 만나<br>당신의 다이어리에 붙는 작은 행복이 되기를.</p>
+  </div>
+</section>
+
+<!-- COLLECTION -->
+<section id="collection">
+  <svg class="doodle float" style="right:6%;top:60px;width:30px;fill:var(--pink)"><use href="#heart"/></svg>
+  <svg class="doodle float d2" style="left:5%;top:120px;width:26px;fill:var(--mint)"><use href="#paw"/></svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="hand">스티커 서랍</div>
+      <h2>컬렉션</h2>
+      <p>다이어리, 폰, 포카 어디에나 톡. 쓰기 편한 씰스티커로 만들었어요.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="ph"><img src="assets/mood_closeup.jpg" alt="오늘의 감정 씰스티커 확대"><span class="badge">BEST</span></div>
+        <div class="body">
+          <h3>오늘의 감정</h3>
+          <p>디어의 기분, 어디의 기분. 좋아·완전·싫어… 그날의 마음을 한 칸에 기록해요.</p>
+          <div class="tags"><span>씰스티커</span><span>기분 기록</span><span>투명·화이트</span></div>
+          <a class="more" href="https://www.idus.com/v2/product/bf60e776-49ef-4f16-b586-bd929f6681ea" target="_blank" rel="noopener">아이디어스에서 보기 →</a>
+          <a class="more" data-ss-product="mood" href="#" target="_blank" rel="noopener" hidden>스마트스토어에서 보기 →</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ph"><img src="assets/woong_sheets.jpg" alt="웅냥냥 고양이 씰스티커 여러 장"></div>
+        <div class="body">
+          <h3>웅냥냥 고양이</h3>
+          <p>식빵 굽고, 동그랗게 말고, 뒤돌아보는 고양이들. 시즌1·2로 친구가 늘었어요.</p>
+          <div class="tags"><span>씰스티커</span><span>시즌 1 · 2</span><span>폰꾸</span></div>
+          <a class="more" href="https://www.idus.com/v2/product/3072b495-e83c-4fb3-87d3-da1926ade06f" target="_blank" rel="noopener">시즌1 보기 →</a>
+          <a class="more" href="https://www.idus.com/v2/product/653b02ba-0047-4a08-a14d-1ca998fbea21" target="_blank" rel="noopener">시즌2 보기 →</a>
+          <a class="more" data-ss-product="woong" href="#" target="_blank" rel="noopener" hidden>스마트스토어에서 보기 →</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ph"><img src="assets/confetti_three.jpg" alt="컬러라인 컨페티 홀로그램 스티커 세 가지 색"></div>
+        <div class="body">
+          <h3>컬러라인 컨페티</h3>
+          <p>빛에 따라 반짝이는 홀로그램 라인. 포카와 사진 테두리를 꾸미기 좋아요.</p>
+          <div class="tags"><span>홀로그램</span><span>핑크·블루·옐로</span><span>포카꾸</span></div>
+          <a class="more" href="https://www.idus.com/v2/product/57c90529-30fe-427e-b407-4d6da8fa1e6e" target="_blank" rel="noopener">아이디어스에서 보기 →</a>
+          <a class="more" data-ss-product="confetti" href="#" target="_blank" rel="noopener" hidden>스마트스토어에서 보기 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MOOD MINI -->
+<section class="paper-band">
+  <div class="wrap">
+    <div class="mood reveal">
+      <svg class="doodle float" style="left:-14px;top:-14px;width:40px;fill:var(--butter)"><use href="#star"/></svg>
+      <svg class="doodle float d3" style="right:-10px;bottom:-12px;width:34px;fill:var(--sky)"><use href="#spark"/></svg>
+      <div class="hand" style="font-size:27px;color:var(--pink-deep)">잠깐, 기록하고 가요</div>
+      <h2>오늘의 기분은 어때요?</h2>
+      <div class="chips" role="group" aria-label="오늘의 기분 고르기">
+        <button type="button" data-a="좋아! 오늘 다이어리엔 하트 하나 더." data-f="dear">좋아</button>
+        <button type="button" data-a="최고의 하루! 반짝이 스티커 출동." data-f="yerdy">최고</button>
+        <button type="button" data-a="싫은 날도 있죠. 따뜻한 차 한 잔 하고 가요." data-f="dear">싫어</button>
+        <button type="button" data-a="졸린 날엔 고양이처럼 동그랗게 쉬어요." data-f="yerdy">졸려</button>
+        <button type="button" data-a="두근두근! 그 마음, 꼭 적어 두기." data-f="dear">설레</button>
+      </div>
+      <div class="answer" aria-live="polite"><span style="color:var(--sub);font-family:Gowun Dodum;font-size:16px;font-weight:400">위에서 하나 골라 보세요</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DAKU GALLERY -->
+<section id="daku">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="hand">이렇게 붙여요</div>
+      <h2>다꾸 기록</h2>
+      <p>스티커가 일상에 놓이면 이런 장면이 돼요.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot reveal"><img src="assets/life_cafe.jpg" alt="카페 케이크 옆 고양이 스티커"><figcaption>케이크 옆 식빵냥</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/mood_sheets.jpg" alt="오늘의 감정 씰 두 장"><figcaption>화이트 &amp; 투명</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/life_pokka.jpg" alt="컨페티 스티커로 꾸민 고양이 포카"><figcaption>우리 집 고양이 포카꾸</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/life_plant.jpg" alt="화분에 붙인 고양이 스티커"><figcaption>화분에도 톡</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/woong_s1.jpg" alt="웅냥냥 시즌1 시트"><figcaption>웅냥냥 친구들</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/confetti_close.jpg" alt="컨페티 홀로그램 확대"><figcaption>반짝반짝 라인</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="insta" class="paper-band">
+  <div class="wrap insta">
+    <div class="reveal">
+      <div class="hand" style="font-size:28px;color:var(--pink-deep)">매일의 기록은 여기서</div>
+      <h2>인스타그램에서<br>더 자주 만나요</h2>
+      <p>신상 소식, 작업 과정, 디어의 카페 추천, 그리고 우리 집 고양이들 이야기를 올려요.</p>
+      <div class="highlights">
+        <span class="hl"><i>🐾</i>고양이들</span>
+        <span class="hl"><i>☕</i>카페추천</span>
+        <span class="hl"><i>✏️</i>문구전</span>
+        <span class="hl"><i>📒</i>다꾸페</span>
+        <span class="hl"><i>💌</i>후기</span>
+      </div>
+      <a class="btn pink" href="https://www.instagram.com/dearyerdy/" target="_blank" rel="noopener">@dearyerdy 팔로우하기</a>
+    </div>
+    <div class="phone reveal" aria-hidden="true">
+      <div class="bar"><img src="assets/dear_face.png" alt=""><div><b>dearyerdy</b><br><span style="font-size:12px;color:var(--sub)">고양이와 함께 달콤한 일상을 수집해요</span></div></div>
+      <div class="grid">
+        <img src="assets/mood_closeup.jpg" alt=""><img src="assets/life_cafe.jpg" alt=""><img src="assets/confetti_three.jpg" alt="">
+        <img src="assets/life_plant.jpg" alt=""><img src="assets/woong_sheets.jpg" alt=""><img src="assets/life_pokka.jpg" alt="">
+        <img src="assets/hero_hand.jpg" alt=""><img src="assets/confetti_close.jpg" alt=""><img src="assets/mood_sheets.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE TO BUY -->
+<section class="buy">
+  <div class="wrap reveal">
+    <div class="sec-head" style="margin-bottom:24px">
+      <div class="hand">데려가는 곳</div>
+      <h2>어디서 만날 수 있나요?</h2>
+      <p>모든 상품은 아래 판매처에서 구매할 수 있어요.</p>
+    </div>
+    <div class="row">
+      <a class="btn pink" href="https://idus.kr/FPR9C" target="_blank" rel="noopener">아이디어스 작가 홈</a>
+      <a class="btn" href="https://www.instagram.com/dearyerdy/" target="_blank" rel="noopener">인스타그램 DM 문의</a>
+      <a class="btn" data-store="smartstore" href="#" target="_blank" rel="noopener" hidden>네이버 스마트스토어</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo_faces.png" alt="디어리어디">
+    <div class="round" style="font-size:20px;color:var(--ink)">디어리어디 · dearyerdy</div>
+    <div class="links">
+      <a href="https://www.instagram.com/dearyerdy/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://idus.kr/FPR9C" target="_blank" rel="noopener">idus</a>
+      <a data-store="smartstore" href="#" target="_blank" rel="noopener" hidden>Smartstore</a>
+    </div>
+    <div>© 2026 dearyerdy. 모든 그림과 사진의 저작권은 디어리어디에 있어요.</div>
+  </div>
+</footer>
+
+<script>
+/* ===== 판매처 설정 =====
+   스마트스토어를 열면 아래 따옴표 안에 주소만 넣으세요. 비어 있으면 버튼이 자동으로 숨겨집니다.
+   store: 스토어 홈 주소 / products: 상품별 주소 (없으면 비워 두기) */
+const SMARTSTORE = {
+  store: '',                 // 예: 'https://smartstore.naver.com/dearyerdy'
+  products: { mood: '', woong: '', confetti: '' }
+};
+if (SMARTSTORE.store) document.querySelectorAll('[data-store="smartstore"]').forEach(a => { a.href = SMARTSTORE.store; a.hidden = false; });
+document.querySelectorAll('[data-ss-product]').forEach(a => { const u = SMARTSTORE.products[a.dataset.ssProduct]; if (u) { a.href = u; a.hidden = false; } });
+
+// 스크롤 등장 효과
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// 오늘의 기분
+const ans=document.querySelector('.mood .answer');
+document.querySelectorAll('.mood button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.mood button').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true');
+  ans.innerHTML=`<img src="assets/${b.dataset.f==='dear'?'dear':'yerdy'}_face.png" alt=""><span>${b.dataset.a}</span>`;
+}));
+</script>
+</body>
+</html>
